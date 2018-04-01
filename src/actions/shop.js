@@ -3,9 +3,9 @@ import { CALL_API } from 'redux-api-middleware';
 
 const BASE_URL = true ? 'http://localhost:3001/api' : 'https://icase.104dc-dev.com/api';
 
-const LOAD_SHOP_SUCCESS = 'LOAD_SHOP_SUCCESS';
-const LOAD_INTRO_SUCCESS = 'LOAD_INTRO_SUCCESS';
-const UPD_AVATAR = 'UPD_AVATAR';
+// const LOAD_SHOP_SUCCESS = 'LOAD_SHOP_SUCCESS';
+// const LOAD_INTRO_SUCCESS = 'LOAD_INTRO_SUCCESS';
+// const UPD_AVATAR = 'UPD_AVATAR';
 
 
 // export function testActionCreator() {

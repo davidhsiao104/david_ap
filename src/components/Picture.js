@@ -7,7 +7,7 @@ const Picture = (props) => {
 	//console.log(fileMap);
 
 
-  return (<img src={imgUrl}/>);
+  return (<img alt="大頭照" src={imgUrl}/>);
 }
 
 export default Picture;

@@ -4,12 +4,13 @@ import { connect } from 'react-redux'
 import * as Actions from '../actions/shop';
 
 class Introduction extends Component {
+	
 	static PropTypes = {
-		children: PropTypes.node
+		introduction: PropTypes.object
 	}
 
 	render(){
-		const { children ,introduction} = this.props
+		const { introduction } = this.props
 
 		return (
 			<div className="introduction">

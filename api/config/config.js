@@ -19,7 +19,8 @@ const setting = {
 		logLevel:{
 			console: 'debug',
 			file: 'error'
-		}
+		},
+		cors:true
 	}
 }
 

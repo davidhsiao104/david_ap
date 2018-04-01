@@ -15,6 +15,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require("morgan")("tiny", { "stream": logger.stream }));
 
+//use CORS
+if(config.cors)
+	require('./config/cors')(app);
+
 // Routers
 app.get('/', (req, res) => {
   res.send('Hello World');

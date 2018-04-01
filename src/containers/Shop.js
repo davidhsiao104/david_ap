@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Personal from './Personal'
+import Personal from '../components/Personal'
 import ShopNavigation from '../components/ShopNavigation'
-import Picture from '../components/Picture'
 import * as Actions from '../actions/shop';
 
 class Shop extends Component {

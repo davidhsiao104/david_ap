@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import Picture from '../components/Picture'
+import Picture from './Picture'
 
 class Personal extends Component {
 	
+	static PropTypes = {
+		nameCard: PropTypes.object,
+		fileMap: PropTypes.object
+	}
 
 	render(){
 		const { nameCard,fileMap } = this.props
@@ -20,12 +23,5 @@ class Personal extends Component {
 	}
 }
 
-const mapStateToProps = (state, ownProps) => {
 
-}
-
-const mapDispatchToProps = (dispatch) => {
-
-}
-
-export default connect()(Personal);
+export default Personal;

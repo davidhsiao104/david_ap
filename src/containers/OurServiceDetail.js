@@ -6,7 +6,7 @@ import * as Actions from '../actions/shop';
 
 class OurServiceDetail extends Component {
 	static PropTypes = {
-		//children: PropTypes.node
+		detail: PropTypes.object
 	}
 
 	render(){

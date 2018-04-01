@@ -7,18 +7,18 @@ import { Link } from 'react-router';
 
 class OurServices extends Component {
 	static PropTypes = {
-		children: PropTypes.node
+		serviceList: PropTypes.array
 	}
 
 	render(){
-		const { children,serviceList } = this.props
+		const { serviceList } = this.props
 
 		return (
 			<div>				
 				項目列表	
 				<ul>
 				{
-					serviceList.map(item=><li><Link	to={`/shop/goods/${item.gid}`}>	{item.title}</Link></li>)
+					serviceList.map(item=><li key={item.gid}><Link	to={`/shop/goods/${item.gid}`}>	{item.title}</Link></li>)
 				}
 				</ul>
 		     </div>
