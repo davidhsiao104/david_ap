@@ -1,0 +1,22 @@
+[ignore]
+.*/node_modules/react-event-listener/.*
+
+[include]
+
+[libs]
+./src/types/GlobalTypes.js.flow
+
+[options]
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+
+module.name_mapper='^@Comps\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^@Ui$' -> '<PROJECT_ROOT>/src/components/ui'
+module.name_mapper='^@Ui\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/ui/\1'
+module.name_mapper='^@Buttons$' -> '<PROJECT_ROOT>/src/components/ui/buttons'
+module.name_mapper='^@Buttons\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/ui/buttons/\1'
+module.name_mapper='^@Utils$' -> '<PROJECT_ROOT>/src/utils'
+module.name_mapper='^@Utils\/\(.*\)$' -> '<PROJECT_ROOT>/src/utils/\1'
+module.name_mapper='^@Joi\/\(.*\)$' -> '<PROJECT_ROOT>/src/joi/\1'
+
+suppress_comment=.*\\$DoNotBother
