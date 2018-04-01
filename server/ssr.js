@@ -45,24 +45,32 @@ const handleRoutes = (res, renderProps, ua) => {
     return promise;    
   }
   
-  getReduxPromise().then(() => {
+  getReduxPromise().then((apiResult) => {    
+    if(apiResult && apiResult.type && apiResult.type =='FAILURE')
+        throw apiResult.payload ? apiResult.payload : apiResult;
+
+    return Promise.resolve();
+  }).then(() => {
   	let reduxState = JSON.stringify(store.getState());
 
     logger.debug('==Start SSR process==');
     let html = renderToString( 
-      <Provider store={store}>
-        <RouterContext {...renderProps}/>
-      </Provider>
-    );
+        <Provider store={store}>
+          <RouterContext {...renderProps}/>
+        </Provider>
+      );
     logger.debug('==End SSR process==');
 
     res.status(200).render('index', {
-	    html,
-	    preloadedState: reduxState,
-	    assetsPath: config.assetsPath
-	  });
+  	    html,
+  	    preloadedState: reduxState,
+  	    assetsPath: config.assetsPath
+  	  });
   }).catch(err => {    
-    handleError(res, err)
+    if(err.status && err.status === 404) 
+        handleNotFound(res,ua);
+    else    
+        handleError(res, err)
   });
 }
 
@@ -70,8 +78,7 @@ const handleRoutes = (res, renderProps, ua) => {
 export default function ssrMiddleware(req, res) {  
   logger.info(`===Catch Request From ${req.originalUrl}===`);  
   match({ routes, location: req.url, /*history*/ }, (err, redirectLocation, renderProps) => {
-    // console.log(renderProps)
-    // global.navigator.userAgent = req.userAgent;
+    
     if (err) handleError(res,err);
     else if(redirectLocation) handleRedirect(res, redirectLocation);
     else if(renderProps) handleRoutes(res, renderProps, req.headers['user-agent']);

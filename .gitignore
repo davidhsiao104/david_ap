@@ -13,3 +13,11 @@ build
 .DS_Store
 .env
 npm-debug.log
+
+# build files
+dist.js
+dist.js.map
+bundle.js
+bundle.js.map
+vendor.min.js
+vendor.min.js.map

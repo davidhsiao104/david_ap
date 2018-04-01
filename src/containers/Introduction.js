@@ -9,6 +9,11 @@ class Introduction extends Component {
 		introduction: PropTypes.object
 	}
 
+	static fetchData({ params,store }) {
+    	// return a promise here
+    	return store.dispatch(Actions.loadIntroBySid(params.sid));
+  	}
+
 	render(){
 		const { introduction } = this.props
 
