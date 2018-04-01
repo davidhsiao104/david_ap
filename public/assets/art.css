@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*雙欄式設定*/
+  .double-col {
+    display: -ms-flexbox;
+    display: flex; }
+    .double-col .left-col {
+      width: 75%;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      margin-right: 28px; }
+    .double-col .right-col {
+      -ms-flex: 1 1;
+          flex: 1 1; }
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: start;
+      justify-content: flex-start; }
+  .row .card {
+    margin-bottom: 32px; }
+
+.avatar {
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 80px;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #d9d9d9; }
+  .avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .avatar .action {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    line-height: 80px;
+    border-radius: 80px;
+    background-color: transparent;
+    color: transparent; }
+    .avatar .action:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #fcfcfc; }
+  .avatar .offline {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 20px;
+    background-color: #d9d9d9;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border: 2px solid #fffefc; }
+  .avatar .online {
+    background-color: #32b16c; }
+  .avatar .mess {
+    position: absolute;
+    font-size: 18px;
+    right: -9px;
+    top: 4px;
+    color: #0e72a6;
+    -webkit-animation-name: tada;
+            animation-name: tada;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+
+div.wrapper {
+	border-width:3px;
+	border-style:dashed;
+	border-color:#FFAC55;
+	padding:5px;
+}
+
+div.headBar {
+	border-width:3px;
+	border-style:dashed;
+	border-color:#FFFC55;
+	padding:5px;
+}
+
+div.footer {
+	border-width:3px;
+	border-style:dashed;
+	border-color:#DDFC55;
+	padding:5px;
+}
+
+div.shop-cover {
+	height: 200px;
+	background-color: gray;
+}
+
+div.personal {
+	height: 200px;
+	background-color: yellow;
+}
+

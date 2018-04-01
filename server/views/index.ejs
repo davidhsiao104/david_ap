@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="<%-assetsPath + '/favicon.ico'%>">
+    <!-- Design -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<%-assetsPath + '/art.css'%>">
+    <!-- Css Bundle -->
+    <link rel="stylesheet" href="<%-assetsPath + '/style.css'%>">
+    <title>SSR React App</title>
+  </head>
+  <body>
+    <div id="root"><%-html%></div>
+    <script>
+      window.__INITIAL_STATE__ = <%-preloadedState%>;
+    </script>
+    <!-- <script type="text/javascript" src=<%-assetsPath + '/form.min.js'%>></script> -->
+    <script type="text/javascript" defer src="<%-assetsPath + '/vendor.min.js'%>"></script>
+    <script type="text/javascript" defer src="<%-assetsPath + '/bundle.js'%>"></script>
+  </body>
+</html>
