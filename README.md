@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Folder Structure
 
 Your project should look like this:
-
+ 
 ```
 david-app/
   api/
