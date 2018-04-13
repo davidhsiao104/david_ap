@@ -1,10 +1,11 @@
-import Joi from 'joi';
-
+import * as Joi from 'joi-i18n';
 
 // take a joi schema and create a validator function for redux form
 export default function createValidator(schema) {
+    
+
   return values => {
-    const result = Joi.validate(values, schema, { abortEarly: false });
+    const result = Joi.validate(values, schema, { abortEarly: false,locale: 'zh_TW' });
     if (result.error === null) {
       return {};
     }

@@ -15,7 +15,7 @@ class Test extends Component {
 
 		return (
 			<div className="wrapper">
-				<TestForm onSubmit={testSubmit} initialValues={testForm} />
+				<TestForm onSubmit={testSubmit}  />
 				
 			</div>
 			)

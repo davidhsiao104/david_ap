@@ -5,6 +5,10 @@ import { syncHistoryWithStore } from 'react-router-redux'
 
 import configureStore from './config/configureStore.js'
 
+import * as Joi from 'joi-i18n';
+import language from './config/joi-zh_TW_language.js';
+
+
 import App from './App.js';
 
 
@@ -14,6 +18,7 @@ function setup() {
   const store = configureStore(initState);
   const history = syncHistoryWithStore(browserHistory, store);
   
+  Joi.addLocaleData('zh_TW', language)
 
   return (
     <App store={store} history={history} />
