@@ -16,6 +16,11 @@ const HeadBar = () => {
 			React / Redux 
 		</Link>			
 		】 (請開API: npm run start:api)
+		【<Link						
+			to={`/test`}>
+			Redux-form example 
+		</Link>
+		】
     </div>
   );
 }

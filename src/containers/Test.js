@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import TestForm from '../components/TestForm'
+import {testFormSubmit} from '../actions/test'
 
 
 class Test extends Component {
@@ -10,11 +11,11 @@ class Test extends Component {
 	}
 
 	render(){
-		const { children } = this.props
+		const { children,testSubmit,testForm } = this.props
 
 		return (
 			<div className="wrapper">
-				<TestForm />
+				<TestForm onSubmit={testSubmit} initialValues={testForm} />
 				
 			</div>
 			)
@@ -22,11 +23,16 @@ class Test extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-	return {};
+	return {
+		testForm:state.testForm
+	};
 }
 
 const mapDispatchToProps = (dispatch) => {
-	return {};
+	return {
+		testSubmit:(value) => alert(value)		
+		//testSubmit:(value) => dispatch(testFormSubmit(value))		
+	};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Test);

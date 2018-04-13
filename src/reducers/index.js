@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import { routerReducer as routing } from 'react-router-redux';
+import { reducer as formReducer } from 'redux-form';
 import shopReducer from './shop';
+import testForm from './testForm';
 
 // const entities = (state = [], action) => {
 //   if (action.payload && action.payload.data) {
@@ -22,8 +24,10 @@ import shopReducer from './shop';
 const rootReducer = combineReducers({
   
   // entities,
-  routing,  
-  shopReducer  
+  routing,
+  form:formReducer,  
+  shopReducer, 
+  testForm
 })
 
 

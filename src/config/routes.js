@@ -6,6 +6,8 @@ import Introduction from '../containers/Introduction'
 import OurServices from '../containers/OurServices';
 import OurServiceDetail from '../containers/OurServiceDetail'
 
+import Test from '../containers/Test'
+
 import Todos from '../pureReact/Todos';
 
 export default (
@@ -19,7 +21,7 @@ export default (
 			<Route path="/shop/:sid/goods" component={OurServices}></Route>
 			<Route path="/shop/goods/:gid" component={OurServiceDetail}></Route>
 		</Route>
-		<Route path="/test" component={Shop}>
+		<Route path="/test" component={Test}>
 		</Route>		
 	</Route>
 );
