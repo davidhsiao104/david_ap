@@ -1,4 +1,4 @@
-import { CALL_API } from 'redux-api-middleware';
+import { RSAA } from 'redux-api-middleware';
 
 
 const BASE_URL = true ? 'http://localhost:3001/api' : 'https://icase.104dc-dev.com/api';
@@ -18,7 +18,7 @@ const BASE_URL = true ? 'http://localhost:3001/api' : 'https://icase.104dc-dev.c
 
 export const loadShopBySid = sid => {
   return {
-    [CALL_API]: {
+    [RSAA]: {
       endpoint: `${BASE_URL}/shop/${sid}`,
       method: 'GET',     
       types: [
@@ -32,7 +32,7 @@ export const loadShopBySid = sid => {
 
 export const loadIntroBySid = sid => {
   return {
-    [CALL_API]: {
+    [RSAA]: {
       endpoint: `${BASE_URL}/shop/${sid}/introduction`,
       method: 'GET',     
       types: [
@@ -46,7 +46,7 @@ export const loadIntroBySid = sid => {
 
 export const loadOurServicesBySid = sid => {  
   return {
-    [CALL_API]: {
+    [RSAA]: {
       endpoint: `${BASE_URL}/shop/${sid}/goods`,
       method: 'GET',
       types: [
@@ -61,7 +61,7 @@ export const loadOurServicesBySid = sid => {
 export const loadServiceDetail = gid => {
   
   return {
-    [CALL_API]: {
+    [RSAA]: {
       endpoint: `${BASE_URL}/shop/goods/${gid}`,
       method: 'GET',
       types: [
